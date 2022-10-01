@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/cainoftes.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Cainoftes",
+    
+    "image": "https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c"
+    
+  },
+  "name":"Cainoftes的小站",
+  "description":"",
+  "url":"https:\/\/cainoftes.github.io\/post\/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88\/",
+  "keywords":"[default]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Cainoftes">
+<meta name="keywords" content="default">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指令及寻址漫谈">
+<meta name="twitter:title" content="指令及寻址漫谈">
+<meta property="og:url" content="https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/">
+<meta property="twitter:url" content="https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/">
+<meta property="og:site_name" content="Cainoftes的小站">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-04-05T22:07:17">
+  
+  
+    <meta property="article:modified_time" content="2022-04-05T22:07:17">
+  
+  
+  
+    
+      <meta property="article:section" content="default">
+    
+  
+  
+    
+      <meta property="article:tag" content="default">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+  <meta property="twitter:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+
+
+
+
+
+
+    <title>指令及寻址漫谈</title>
+
+    <link rel="icon" href="https://cainoftes.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://cainoftes.github.io/" aria-label="去首页">Cainoftes的小站</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://cainoftes.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://cainoftes.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Cainoftes</h4>
+        
+          <h5 class="sidebar-profile-bio">平平无奇</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/cainoftes" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.zhihu.com/people/cainte" target="_blank" rel="noopener" title="知乎">
+    
+      <i class="sidebar-button-icon fab fa-lg" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">知乎</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      指令及寻址漫谈
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-04-05T22:07:17&#43;08:00">
+        
+  四月 5, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://cainoftes.github.io/categories/default">default</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <!-- raw HTML omitted -->
+<p><em>这篇并不是来教条的，告诉你到底什么寻址叫什么。这篇文章是讲汇编指令的</em></p>
+<h2 id="数的寻址">数的寻址</h2>
+<ol>
+<li>
+<p>强大的<code>mov</code>指令。</p>
+<pre tabindex="0"><code>MOV DST, SRC
+</code></pre><p>按照朴素的价值观。汇编语言中的数大概可以这样分类</p>
+<ul>
+<li>立即数，也就是直接嵌入到汇编语言中的。</li>
+<li>寄存器，数字保存在CPU内的寄存器中</li>
+<li>内存，数字并没有调入CPU，而是放在内存中等待调用</li>
+</ul>
+<p>基本这三类就可以概括清楚了。但是在<code>MOV</code>指令中我们还得细化一下寄存器</p>
+<ul>
+<li>通用寄存器</li>
+<li>段寄存器</li>
+</ul>
+<p>段寄存器的作用就是来为段寻址（在16位和32位中的寻址方式不同），基本来讲，有</p>
+<ul>
+<li>CS(Code Segment)：寻址当前代码段</li>
+<li>DS(Data Segment)：寻址数据段</li>
+<li>SS(Stack Segment)：寻址栈段（但是不知道为什么被翻译为堆栈）</li>
+</ul>
+<p>而通用寄存器就老多了</p>
+<ul>
+<li>AX(Accumulator Reg)</li>
+<li>BX(Base Reg)</li>
+<li>CX(Counter Reg)</li>
+<li>DX(Data Reg)</li>
+<li>BP(Base Pointer)</li>
+<li>SI(Source Index)</li>
+<li>DI(Destination Index)</li>
+</ul>
+<p>当然，上面给我们的启示之一就是这些名字不是乱起的，每一个都代表着一定的意义。虽然叫通用寄存器，但是有些功能离开了某一个寄存器就是不行。例如说AX、DX之于MUL指令。</p>
+<p>知道了上面这些，就可以详细讨论一下<code>MOV</code>指令的寻址方式了（或许称为DST和SRC的类型更为妥当！）</p>
+<p>\1. 立即数只能做SRC</p>
+<p>\2. 内存只能做DST，除非通用寄存器做SRC</p>
+<p>\3. 段寄存器不能直接和立即数MOV</p>
+<p>\4. 只有通用寄存器才可以从自身到自身</p>
+<p>实际上每一类对应一条规则，规则1的优先级最高，这样可以推出DST和SRC的情况。但是还有一点小小的瑕疵</p>
+<p>\5. CS不能作为DST</p>
+<p>这样就完美了。CS是当前执行代码段的寻址寄存器，切换当前程序段自然有它的方法，而不是靠着MOV改变CS就能切换的，至于如何改变的，这个后面再讲！</p>
+<p>Tips1：需要注意的是，DST和SRC表达的数应该是相同长度的，不然会出错。别的都好说，如果遇到了内存里边的数，可以用 <code>[某个标识长度的词] PTR</code> 来标识这个数的长度。</p>
+<p>Tips2：这里的MOV还可以是ADD, ADC, SUB, SBB, CMP, AND, TEST, OR, XOR等</p>
+</li>
+<li>
+<p><code>IN</code>和<code>OUT</code></p>
+<pre tabindex="0"><code>IN ACR, PORT
+OUT PORT, ACR
+</code></pre><p>这里的ACR意思是累加寄存器，也就是AL/AX/EAX/RAX。</p>
+<p>这里的PORT可以是立即数，如果这个立即数能用一个字节标识的话（0-255）</p>
+<p>这里的PORT还可以是DX标识，如果使用了DX，也就意味着要使用间接寻址的方式。</p>
+</li>
+<li>
+<p>难以理解的<code>MUL</code></p>
+<pre tabindex="0"><code>MUL SRC
+</code></pre><p>事实上，这里的SRC不能是立即数（可以为段寄存器）。</p>
+<p>有以下两个问题需要解决：</p>
+<ol>
+<li>乘法涉及到三个数，被乘数、乘数、积。另外两个去了哪？</li>
+<li>积的范围要比乘数和被乘数大。例如说，两个8位的数相乘，积最大可能是65025，需要使用16位来保存。应该怎么处理。</li>
+</ol>
+<p>所以，MUL隐藏了被乘数和积。其中被乘数隐藏在累加器中（从硬件上来说，乘法可以被累加所实现，当然，也可以使用更高效的办法，主要看CPU的设计），也就是AL, AX, EAX中。而具体选用累加器的哪个，还得看SRC，SRC是多少位的就使用多少位的累加器。</p>
+<p>如果是AL，必须使用使用16位来保存结果，也就是AX。</p>
+<p>如果是AX，必须使用32位来保存结果，但是不能是EAX。因为AX是随着16位CPU诞生的，哪个时候EAX还没有诞生，所以使用了DX-AX的方式，将两个寄存器拼接在一起来表示。</p>
+<p>如果是EAX，必须使用64位来保存结果，也就是EDX-EAX。</p>
+<p>当32位CPU诞生的时候，为了兼容只能继续之前的设计方式。</p>
+<p>Tips：IMUL中的一种和MUL的寻址一样。</p>
+</li>
+<li>
+<p><code>DIV</code></p>
+<pre tabindex="0"><code>DIV SRC
+</code></pre><p>这里对SRC的要求和MUL一样，不能是一个立即数（但是不理解为什么不能是）</p>
+<p>也有两个问题需要解决</p>
+<ol>
+<li>被除数，除数，商中的另外两个去了哪？</li>
+<li>如果除不尽应该怎么办？</li>
+</ol>
+<p>实际上，还有一个问题，CPU的设计者并不满足这样设计，因为还有更好的方案。并牵扯除了第三个问题</p>
+<ol>
+<li>被除数的位数是除数的两倍</li>
+</ol>
+<p>至于为什么这么设计更好，后面再说。</p>
+<p>没有了结果变长的苦恼，但是又多了一个还有余数的苦恼。但是使用MUL的逆向思维，也可以解决这两个问题。</p>
+<p>SRC是一个除数，被除数至少有一部分保存在累加器中。事实上，把MUL完全倒过来可以先解释一部分问题。</p>
+<p>如果SRC是8位的，那么被除数应该是16位的，直接使用AX。</p>
+<p>如果SRC是16位的，那么被除数应该是32位的，直接使用DX-AX。</p>
+<p>如果SRC是32位的，那么被除数应该是64位的，直接使用 EDX-EAX</p>
+<p>可以看出来，这就是MUL的逆向。</p>
+<p>说完了被除数，再来说商和余数。</p>
+<p>如果说使用AX，商最多只有8位，保存到AL中，余数保存到DL中。</p>
+<p>如果说使用DX-AX，商最多只有16位，保存到AX中，余数保存到DX中。</p>
+<p>如果说使用EDX-EAX，商最多只有32位，保存到EAX中，余数保存到EDX中。</p>
+<p>可以说，数据寄存器(D)就是为了累加器(A)而服务的。</p>
+<p>Tips：IDIV同理</p>
+</li>
+<li>
+<p><code>SHL</code></p>
+<pre tabindex="0"><code>SHL DST, CNT
+</code></pre><p>其中，DST不能是立即数，CNT由CL寄存器给出（也可以使用立即数，但是这个是30286之后，但是不管是怎么样的,，CNT的位数不能大于8位。如果真大于了，也没有什么实际的意义，直接清零了）</p>
+</li>
+</ol>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/default/">default</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/c/" data-tooltip="C" aria-label="下一篇: C">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/instruction/" data-tooltip="Instruction" aria-label="上一篇: Instruction">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/cainoftes.github.io\/post\/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88\/';
+        
+          this.page.identifier = '\/post\/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'tranquilpeak';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Cainoftes. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/c/" data-tooltip="C" aria-label="下一篇: C">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/instruction/" data-tooltip="Instruction" aria-label="上一篇: Instruction">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2F%25E6%258C%2587%25E4%25BB%25A4%25E5%258F%258A%25E5%25AF%25BB%25E5%259D%2580%25E6%25BC%25AB%25E8%25B0%2588%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2F%25E6%258C%2587%25E4%25BB%25A4%25E5%258F%258A%25E5%25AF%25BB%25E5%259D%2580%25E6%25BC%25AB%25E8%25B0%2588%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2F%25E6%258C%2587%25E4%25BB%25A4%25E5%258F%258A%25E5%25AF%25BB%25E5%259D%2580%25E6%25BC%25AB%25E8%25B0%2588%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Cainoftes</h4>
+    
+      <div id="about-card-bio">平平无奇</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Stu.
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://cainoftes.github.io/images/cover.webp');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

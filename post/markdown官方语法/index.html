@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/cainoftes.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Cainoftes",
+    
+    "image": "https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c"
+    
+  },
+  "name":"Cainoftes的小站",
+  "description":"",
+  "url":"https:\/\/cainoftes.github.io\/post\/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95\/",
+  "keywords":"[default]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Cainoftes">
+<meta name="keywords" content="default">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown官方语法">
+<meta name="twitter:title" content="Markdown官方语法">
+<meta property="og:url" content="https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/">
+<meta property="twitter:url" content="https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/">
+<meta property="og:site_name" content="Cainoftes的小站">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-06-18T22:07:16">
+  
+  
+    <meta property="article:modified_time" content="2022-06-18T22:07:16">
+  
+  
+  
+    
+      <meta property="article:section" content="default">
+    
+  
+  
+    
+      <meta property="article:tag" content="default">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+  <meta property="twitter:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+
+
+
+
+
+
+    <title>Markdown官方语法</title>
+
+    <link rel="icon" href="https://cainoftes.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://cainoftes.github.io/" aria-label="去首页">Cainoftes的小站</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://cainoftes.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://cainoftes.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Cainoftes</h4>
+        
+          <h5 class="sidebar-profile-bio">平平无奇</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/cainoftes" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.zhihu.com/people/cainte" target="_blank" rel="noopener" title="知乎">
+    
+      <i class="sidebar-button-icon fab fa-lg" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">知乎</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Markdown官方语法
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-06-18T22:07:16&#43;08:00">
+        
+  六月 18, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://cainoftes.github.io/categories/default">default</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <!-- raw HTML omitted -->
+<h2 id="前言">前言</h2>
+<p>Markdown 由 John Gruber 于 2004 年创建</p>
+<p>在使用 Markdown 格式书写时，文本内容存储在带有 <code>.md</code> 或 <code>.markdown</code> 扩展名的纯文本文件中。然后通过 Markdown App 解析为 HTML 。最后的内容通过 HTML 呈现。</p>
+<p>实际上每个 Markdown 应用程序都实现了稍有不同的 Markdown 语法。Markdown 的这些变体通常被称为 flavors（方言）。这就意味着，当你想使用一个 Markdown 应用程序的时候，永远无法确切知道该应用程序到底实现了什么，除非查阅文档。</p>
+<h2 id="基本语法">基本语法</h2>
+<h3 id="标题">标题</h3>
+<p>支持 1-6 级标题。</p>
+<p>最常用的语法为 <code>#&lt;space&gt;&lt;text&gt;</code>。</p>
+<p>但是在 <code>&lt;text&gt;</code> 下一行使用 <code>==</code> 来标识一级标题，使用 <code>--</code> 来标识二级标题</p>
+<h3 id="段落">段落</h3>
+<p>如果要创建段落，需要使用一行空白行来进行分割。</p>
+<p>即：段落内部行之间的距离和两段之间的行距离不相同。</p>
+<p>在比较高级的编辑器（例如Typora）中，实时渲染的时候可以使用回车来创建新段落。</p>
+<h3 id="换行">换行</h3>
+<p>换行一般使用 HTML 语法来实现。即 <code>&lt;br/&gt;</code></p>
+<h3 id="强调">强调</h3>
+<p>强调的作用是__加粗__文本或者将文本<em>倾斜</em>。</p>
+<p>如果想要加粗文本，在文本之前和之后各自插入<code>**</code>，即<code>**&lt;text&gt;**</code>。当然也可以使用<code>__&lt;text&gt;__</code>，但是兼容性并不好。</p>
+<p>如果想要倾斜文本，在文本之前和之后各自插入<code>*</code>，即<code>*&lt;text&gt;*</code>。当然也可以使用<code>_&lt;text&gt;_</code>，但是这种兼容性更加不好（在 Tex 中，下划线会将之后的一个字符转换为下标）。</p>
+<p>如果想要<em><strong>加粗的同时倾斜文本</strong></em>，可以在文本之前和之后各自插入<code>***</code>，即<code>***&lt;text&gt;***</code>。同理，还是有<code>___&lt;text&gt;___</code>的写法，但是不建议。</p>
+<h3 id="列表">列表</h3>
+<p>最常使用的列表是有序列表。</p>
+<p>语法为 <code>&lt;number&gt;.&lt;space&gt;&lt;text&gt;</code>。</p>
+<p>需要注意的是，&lt;number&gt; 需要以 1 来开头，但是其余的数字标号不重要，可以随便写，最终效果会进行自动重排。</p>
+<p>还有一种列表为无序列表。</p>
+<p>语法为 <code>[+-*]&lt;space&gt;&lt;text&gt;</code>。</p>
+<p>如果要在列表中插入另一种元素但是不改变原本的列表元素顺序，需要使用 Tab 键对插入的元素进行缩进处理。</p>
+<p>经过以上方法的组合，也可以实现列表中嵌套列表的结果。</p>
+<h3 id="代码">代码</h3>
+<p>所谓代码就是将文本段进行特殊的显示（具体显示不知道怎么描述）。在代码段前后各插入符号 <code>`</code>。当代码段中有符号<code>`</code>时候，可以使用两个连写的 <code>`</code> 来表示。</p>
+<p>当要使用代码块的时候，需要使用 4 个空格或者一个 Tab 来表示。</p>
+<p>实际上，更加常用的是围栏式代码块，见扩展语法。</p>
+<h3 id="分隔线">分隔线</h3>
+<p>一般在单独的一个空行中使用三个连续的<code>*</code>、<code>-</code> 或者 <code>_</code> 来形成分隔线的效果。</p>
+<p>一般为了兼容性，会在这样的空行前后各插入两个空行。</p>
+<h3 id="链接">链接</h3>
+<p>链接常常用来实现跳转。</p>
+<p>最简单的语法如下：<code>[要显示的文字](https://url)</code>。例如<code>[知乎](https://zhihu.com)</code>。</p>
+<p>还有一种被称为 Title 的语法，在 url 后空一格，然后使用双引号引用文字。最终的效果是当鼠标悬停在该链接的时候，会显示双引号中的文字。</p>
+<p>例如：<code>[知乎](https://zhihu.com &quot;知乎是最好的搜索引擎&quot;)</code></p>
+<p>如果方括号和圆括号中的文字相同，即，都是 url ，可以使用<code>&lt;url&gt;</code> 或者 <code>&lt;email&gt;</code>的语法。</p>
+<p>除了常用的这种链接之外，还有一种引用链接，将真正的 url 放在文章的另一个地方（例如结尾）。举个例子：</p>
+<pre tabindex="0"><code>[知乎][1]
+[1]: https://zhihu.com &#34;知乎是最好的搜索引擎&#34;
+</code></pre><h3 id="图片">图片</h3>
+<p>使用图片的方式和使用链接的方式中的一种非常相似，举例如下</p>
+<pre tabindex="0"><code>![pic][url &#34;可选&#34;]
+</code></pre><p>其中第一个方括号中的文字没有作用。</p>
+<p>当然，将图片和上面的链接相结合，最终可以实现点击图片就跳转的功能（图片链接）</p>
+<h3 id="引用">引用</h3>
+<p>引用是改变一段文字的显示效果。</p>
+<p>语法为 <code>&gt; &lt;paragraph&gt;</code></p>
+<p>如果要对多个段的文字进行应用，需要在原本的空行开头也插入一个<code>&gt;</code></p>
+<p>还可以在一个引用块中再添加引用。</p>
+<p>语法为 <code>&gt;&gt; &lt;paragraph&gt;</code></p>
+<h3 id="嵌入html">嵌入HTML</h3>
+<p>可以将 HTML 的语法嵌入到 Markdown 中。</p>
+<p>对于行级元素，没有过多的限制</p>
+<p>低于块级元素，在块元素前后各插入一行空行。</p>
+<h2 id="扩展语法">扩展语法</h2>
+<h3 id="表格">表格</h3>
+<pre tabindex="0"><code>| Syntax      | Description |
+| :-----------  | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+</code></pre><h3 id="围栏式代码块">围栏式代码块</h3>
+<p>在代码块的前后各使用三个 <code>`</code> 或者 <code>~</code>来表示。</p>
+<p>如果要高亮显示代码，可以在行前的<code>`</code> 之后输入具体的编程语言（就看Markdown App 支持性怎么样了）</p>
+<h3 id="脚注">脚注</h3>
+<p>脚注引用部分比较简单，使用的语法如下：<code>[^key]</code>。</p>
+<p>在定义部分也比较简单，使用的语法如下：<code>[key]: text</code></p>
+<h3 id="标题id">标题ID</h3>
+<p>可以通过在标题之后使用<code>{ID}</code>来表示标题的ID。最大的好处是转换为HTML之后还是会保留ID，可以引用。</p>
+<blockquote>
+<p>这儿我还没有搞清楚</p>
+</blockquote>
+<h3 id="删除线">删除线</h3>
+<p>通过在文本前后添加<code>~~</code>实现删除效果（就是在文本上显示删除线）。</p>
+<h3 id="任务列表">任务列表</h3>
+<p>任务列表中的任务包括两类，完成的和没有完成的。通过一个 <code>x</code>来体现。需要注意各个字符之间有没有空格的问题。</p>
+<pre tabindex="0"><code>- [x] 好好学习
+- [ ] 天天向上 
+</code></pre><h3 id="emoji">Emoji</h3>
+<p>最简单的方法是使用复制粘贴（Emoji本质上还是UTF-8，需要各个环节都使用UTF-8）</p>
+<p>另一种方法是使用 Emoji 名和前后添加 <code>:</code>的方法，例如：</p>
+<p>:deer:</p>
+<pre tabindex="0"><code>:deer:
+</code></pre><h3 id="自动网址链接">自动网址链接</h3>
+<p>Markdown 中的 URL 经常会被识别出来，然后当作 URL 来处理，如果不想要自动处理的方式，可以将 URL 当作代码处理，即在 URL 前后添加 <code>`</code>。</p>
+<h2 id="参考资料">参考资料</h2>
+<blockquote>
+<ul>
+<li>[Markdown 官方教程](</li>
+</ul>
+</blockquote>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/default/">default</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/cmd/" data-tooltip="CMD" aria-label="下一篇: CMD">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/python%E6%80%BB%E5%86%99/" data-tooltip="Python总写" aria-label="上一篇: Python总写">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/cainoftes.github.io\/post\/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95\/';
+        
+          this.page.identifier = '\/post\/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'tranquilpeak';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Cainoftes. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/cmd/" data-tooltip="CMD" aria-label="下一篇: CMD">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/python%E6%80%BB%E5%86%99/" data-tooltip="Python总写" aria-label="上一篇: Python总写">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fmarkdown%25E5%25AE%2598%25E6%2596%25B9%25E8%25AF%25AD%25E6%25B3%2595%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fmarkdown%25E5%25AE%2598%25E6%2596%25B9%25E8%25AF%25AD%25E6%25B3%2595%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fmarkdown%25E5%25AE%2598%25E6%2596%25B9%25E8%25AF%25AD%25E6%25B3%2595%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Cainoftes</h4>
+    
+      <div id="about-card-bio">平平无奇</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Stu.
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://cainoftes.github.io/images/cover.webp');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

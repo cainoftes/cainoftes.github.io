@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/cainoftes.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Cainoftes",
+    
+    "image": "https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c"
+    
+  },
+  "name":"Cainoftes的小站",
+  "description":"",
+  "url":"https:\/\/cainoftes.github.io\/post\/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/",
+  "keywords":"[default]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Cainoftes">
+<meta name="keywords" content="default">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hugo搭配Github Pages发布静态博客">
+<meta name="twitter:title" content="Hugo搭配Github Pages发布静态博客">
+<meta property="og:url" content="https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+<meta property="twitter:url" content="https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+<meta property="og:site_name" content="Cainoftes的小站">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-10-01T22:19:17">
+  
+  
+    <meta property="article:modified_time" content="2022-10-01T22:19:17">
+  
+  
+  
+    
+      <meta property="article:section" content="default">
+    
+  
+  
+    
+      <meta property="article:tag" content="default">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+  <meta property="twitter:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+
+
+
+
+
+
+    <title>Hugo搭配Github Pages发布静态博客</title>
+
+    <link rel="icon" href="https://cainoftes.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://cainoftes.github.io/" aria-label="去首页">Cainoftes的小站</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://cainoftes.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://cainoftes.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Cainoftes</h4>
+        
+          <h5 class="sidebar-profile-bio">平平无奇</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/cainoftes" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.zhihu.com/people/cainte" target="_blank" rel="noopener" title="知乎">
+    
+      <i class="sidebar-button-icon fab fa-lg" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">知乎</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Hugo搭配Github Pages发布静态博客
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-01T22:19:17&#43;08:00">
+        
+  十月 1, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://cainoftes.github.io/categories/default">default</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <!-- raw HTML omitted -->
+<blockquote>
+<p>学会，然后完成！而不是，完成，再学。</p>
+</blockquote>
+<h2 id="工具介绍">工具介绍</h2>
+<ul>
+<li>
+<p>站点托管工具：Github Pages</p>
+<p>这是github为用户提供的一个免费功能，用户将自己的Html(CSS, JS)代码上传到Github Pages，Github Pages将这些通过网站的方式显示出来。相当于提供了一个只能发布网页的服务器。</p>
+<p>官方文档：<a href="https://docs.github.com/cn/pages/getting-started-with-github-pages">github-pages</a></p>
+</li>
+<li>
+<p>静态网站生成器：Hugo</p>
+<p>什么是“静态”：静态是指用户和网页不能交互，不能动态改变显示的HTML的页面内容（评论系统除外）</p>
+<p>Hugo 使用Go语言开发，是一个静态网站生成器。更简单理解，它将Markdown写成的文档组装为HTML和CSS代码。
+之前看到一句话，颇有道理：“这是一个笔记软件比笔记还多的时代”。夸张一下放到博客系统也成立：“这是一个博客系统比博客还多的时代”。除了Github Pages之外还有Gitee Pages……，除了Hugo 还有 Hexo，Jekyll……甚至还有写博客的软件，例如Gridea。</p>
+</li>
+</ul>
+<p>以上举例中提到的工具，我都使用过，反而发现自己背离了初心：我在为菜刀雕花。菜刀只是用来切菜的，其上到底用什么花纹似乎并无关系。</p>
+<p>所以最后选择了Github pages和Hugo来搭建自己的博客系统，在此立下Flags，可预见的时间内，不会更换其它的博客系统。</p>
+<h2 id="hugo生成静态博客">Hugo生成静态博客</h2>
+<h3 id="windows下的hugo下载">Windows下的Hugo下载</h3>
+<p>官方地址：<a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+<p>根据以上文档，详细说明以下两个安装方式</p>
+<h4 id="安装包安装">安装包安装</h4>
+<p>由于Hugo是一个开源项目，其代码托管在Github中。Github也提供了软件的Release版本，地址为<a href="https://github.com/gohugoio/hugo/releases">Releases · gohugoio/hugo (github.com)</a>。</p>
+<p>（似乎Windows下暂时不能通过安装包安装）</p>
+<h4 id="包管理器安装">包管理器安装</h4>
+<p>包管理器也是一个软件，它可以管理其它的软件（并不是所有的软件都可以被其管理，总有一些漏网之鱼只能用安装包管理）。这里的管理指：安装，卸载，修改等。</p>
+<p>Scoop 安装教程<a href="https://cloud.tencent.com/developer/article/1695375#:~:text=%E5%9C%A8PowerShell%E4%B8%AD%E8%BF%90%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%2Cscoop%E5%B0%86%E5%AE%89%E8%A3%85%E5%88%B0%E5%85%B6%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE%20%28C%3AUsers%3Cuser%3Escoop%29%20Set-ExecutionPolicy%20-ExecutionPolicy%20RemoteSigned%20-Scope,CurrentUser%20%20%E5%AE%89%E8%A3%85.%20%E4%B8%BA%E6%82%A8%E7%9A%84%E7%94%A8%E6%88%B7%E5%B8%90%E6%88%B7%E5%90%AF%E7%94%A8PowerShell.%20%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%EF%BC%8C%E8%BE%93%E5%85%A5scoop%20help%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F.%20%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.">Windows下Scoop安装、配置与使用 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p>使用Scoop管理器安装，使用以下命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scoop install hugo
+</span></span></code></pre></div><h3 id="hugo使用">Hugo使用</h3>
+<p><a href="https://www.gohugo.org/">Hugo中文文档 (gohugo.org)</a></p>
+<ol>
+<li>
+<p>新建一个Hugo网站存放文件夹</p>
+<p><code>hugo new site hugo-folder</code>：在当前目录下新建了hugo-folder文件夹，文件夹中被hugo初始化，里边有hugo运行需要的文件和文件夹。</p>
+<p>下文中的 . 文件夹代表hugo-folder文件夹</p>
+</li>
+<li>
+<p>选一个主题，下载到 hugo-folder/themes文件夹下</p>
+<p>主题可以在<a href="https://themes.gohugo.io/">Complete List | Hugo Themes (gohugo.io)</a>中选择，推荐使用Tranquilpeak 主题（可以跟着教程配置一遍，走完整个流程再选择自己喜欢的主题）</p>
+<p>跳转到hugo-folder/themes文件夹下，使用以下命令</p>
+<p><code>git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git tranquilpeak</code>：将github的hugo-tranquilpeak-theme仓库下载到themes文件夹下的tranquilpeak文件夹中</p>
+</li>
+<li>
+<p>修改主文件夹下的config.toml文件，这个文件本质是一个文本文件（配置文件，作用类似于.json .yaml等格式），可以使用各种文本编辑器打开</p>
+<p>使用 ./themes/tranquilpeak/exampleSite/config.toml文件替换 config.toml文件。</p>
+<p>这是一个模板文件，已经配置好了，下文会详细介绍如何修改</p>
+</li>
+<li>
+<p>新建博客</p>
+<p>在 . 目录下使用 <code>hugo new post/my-first-post.md</code>命令可以生成名为 my-first-post.md的Markdown文件。</p>
+<p>打开之后在里边添加文章（头部不要修改，在已经存在的部分下面添加，头部的作用和格式会在后文说明）</p>
+</li>
+<li>
+<p>生成网站并查看</p>
+<p>在 . 目录下运行 <code>hugo</code>命令，会生成./public文件夹，文件夹下就是HTML和CSS文件。</p>
+<p>在 . 目录下运行 <code>hugo server</code>命令，该命令会在本地主机（自己的电脑）中生成一个网站，可以在浏览器中通过 http://localhost:1313/ 访问。事实上，在运行完该命令的结果中就要如何查看的提示。</p>
+<p>如果有相关的开发经验，就知道这种访问方式很常见。</p>
+<p>这一步应该生成一个静态博客网站，其中可以看到在第四步中写的文字。</p>
+</li>
+</ol>
+<h3 id="configtoml详细配置">config.toml详细配置</h3>
+<p>关于配置可以参见 <a href="https://pengpengyang94.github.io/2020/04/%E5%8D%9A%E5%AE%A2%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/">博客细节配置 (pengpengyang94.github.io)</a> 文章，里边基本将要修改的参数说明了。</p>
+<h3 id="新文章模板">新文章模板</h3>
+<p>模板保存在themes/tranquilpeak/archetypes中</p>
+<h3 id="图床设置">图床设置</h3>
+<p>图片的默认根目录为./static，如果一个图片目录为./static/a.jpg，那么引用的时候要使用 /a.jpg，一般情况下，在./static/img下。</p>
+<h3 id="评论功能">评论功能</h3>
+<p>暂未完善</p>
+<h2 id="部署到github-pages">部署到Github Pages</h2>
+<h3 id="建立仓库">建立仓库</h3>
+<p>新建立一个仓库，仓库名字命名为 [name].github.io</p>
+<p>如果你的github用户名为 zhangsan，那仓库名为zhangsan.github.io</p>
+<p>如果你的github用户名为 lisi，那仓库名为lisi.github.io</p>
+<h3 id="将本地文件托管到github">将本地文件托管到github</h3>
+<p>生成的博客位于 ./public文件夹下，所以以下命令在 ./public 文件夹下进行</p>
+<ul>
+<li>
+<p><code>git init</code>：将当前文件夹初始化为git仓库</p>
+</li>
+<li>
+<p><code>git add .</code>：将当前所有文件加入git暂存区</p>
+</li>
+<li>
+<p><code>git commit -m &quot;初次提交&quot;</code>：提交暂存区文件</p>
+</li>
+<li>
+<p><code>git remote add origin [info]</code>：关联远程库文件</p>
+<p>[info]需要修改为自己的地址，可以在github仓库中的Code（那个绿色的按钮）下复制ssh信息</p>
+</li>
+<li>
+<p><code>git branch -M  main</code>：将当前分支从master修改为main</p>
+<p>因为git默认的仓库是master，而github默认的仓库是main（原本也是master，2020年因为一些原因修改为了main），会导致不一致。</p>
+</li>
+<li>
+<p><code>git push origin main</code>：推送</p>
+</li>
+</ul>
+<h3 id="查看">查看</h3>
+<p>可以通过 zhangsan.github.io （zhangsan修改为自己的github名）查看自己的博客，需要注意的是，从推送到github再到更新，可能有一段时间（1min这个样子）</p>
+<p>参考</p>
+<p><a href="https://zz2summer.github.io/github-pages-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#%E5%85%AD%E9%83%A8%E7%BD%B2%E5%88%B0-github">Github Pages + Hugo 搭建个人博客 - 渣渣的夏天 (zz2summer.github.io)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/57361697">如何利用 GitHub Pages 和 Hugo 轻松搭建个人博客？ - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.jianshu.com/p/8da9cc971851">Hugo+tranquilpeak搭建个人博客+github部署（windows10） - 简书 (jianshu.com)</a></p>
+<p><a href="https://blog.csdn.net/du_milestone/article/details/83048444">tranquilpeak主题个性化_Chris.DDD的博客-CSDN博客</a></p>
+<p><a href="https://blog.fevenor.com/2016/02/15/Tranquilpeak%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%85%8D%E7%BD%AE/#Tranquilpeak%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE">Tranquilpeak主题的使用及配置 - Fevenor&rsquo;s Blog</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/default/">default</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/git/" data-tooltip="Git" aria-label="下一篇: Git">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/sublime-text4-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-tooltip="Sublime Text4 使用指南" aria-label="上一篇: Sublime Text4 使用指南">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/cainoftes.github.io\/post\/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/';
+        
+          this.page.identifier = '\/post\/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'tranquilpeak';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Cainoftes. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/git/" data-tooltip="Git" aria-label="下一篇: Git">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/sublime-text4-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-tooltip="Sublime Text4 使用指南" aria-label="上一篇: Sublime Text4 使用指南">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fhugo%25E6%2590%25AD%25E9%2585%258Dgithub-pages%25E5%258F%2591%25E5%25B8%2583%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fhugo%25E6%2590%25AD%25E9%2585%258Dgithub-pages%25E5%258F%2591%25E5%25B8%2583%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fhugo%25E6%2590%25AD%25E9%2585%258Dgithub-pages%25E5%258F%2591%25E5%25B8%2583%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Cainoftes</h4>
+    
+      <div id="about-card-bio">平平无奇</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Stu.
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://cainoftes.github.io/images/cover.webp');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

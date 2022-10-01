@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/cainoftes.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Cainoftes",
+    
+    "image": "https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c"
+    
+  },
+  "name":"Cainoftes的小站",
+  "description":"",
+  "url":"https:\/\/cainoftes.github.io\/post\/c-%E6%93%8D%E4%BD%9C%E7%AC%A6\/",
+  "keywords":"[default]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Cainoftes">
+<meta name="keywords" content="default">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C 操作符">
+<meta name="twitter:title" content="C 操作符">
+<meta property="og:url" content="https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/">
+<meta property="twitter:url" content="https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/">
+<meta property="og:site_name" content="Cainoftes的小站">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-05-19T22:07:14">
+  
+  
+    <meta property="article:modified_time" content="2022-05-19T22:07:14">
+  
+  
+  
+    
+      <meta property="article:section" content="default">
+    
+  
+  
+    
+      <meta property="article:tag" content="default">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+  <meta property="twitter:image" content="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c">
+
+
+
+
+
+
+    <title>C 操作符</title>
+
+    <link rel="icon" href="https://cainoftes.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://cainoftes.github.io/" aria-label="去首页">Cainoftes的小站</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://cainoftes.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://cainoftes.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Cainoftes</h4>
+        
+          <h5 class="sidebar-profile-bio">平平无奇</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/cainoftes" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.zhihu.com/people/cainte" target="_blank" rel="noopener" title="知乎">
+    
+      <i class="sidebar-button-icon fab fa-lg" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">知乎</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://cainoftes.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      C 操作符
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-05-19T22:07:14&#43;08:00">
+        
+  五月 19, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://cainoftes.github.io/categories/default">default</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <!-- raw HTML omitted -->
+<h2 id="heading">.</h2>
+<ul>
+<li>
+<p>访问外层命名空间中的子层命名空间</p>
+</li>
+<li>
+<p>访问名称空间中的类型</p>
+</li>
+<li>
+<p>访问类的静态成员（静态成员属于类）</p>
+</li>
+<li>
+<p>访问对象的实例成员</p>
+<pre tabindex="0"><code>System.IO.Create();
+</code></pre></li>
+</ul>
+<h2 id="heading-1">[]</h2>
+<p>用法：方括号里边放索引</p>
+<ul>
+<li>
+<p>访问数组，方括号里边是整数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// 演示一下数组的创建</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 虽然是一个数组对象，但是不能用正常的创建方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] myIntArray = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 初始化构造器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] myIntArray = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[]{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> ,<span style="color:#ae81ff">4</span> ,<span style="color:#ae81ff">5</span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 需要注意的是，这两个数字必须相同</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] myIntArray = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[<span style="color:#ae81ff">5</span>]{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>};
+</span></span></code></pre></div></li>
+<li>
+<p>访问字典</p>
+<pre tabindex="0"><code>// 演示字典创建
+Dictionary&lt;String, classname&gt; classDict = new Dictionary&lt;String, Classname&gt;();
+</code></pre></li>
+</ul>
+<h2 id="typedof">typedof()</h2>
+<p>Metadata</p>
+<pre tabindex="0"><code>Type t = typedof(int);
+t.Namespace();
+t.GetMethods();
+</code></pre><h2 id="default">default()</h2>
+<pre tabindex="0"><code>int x = default(int);
+// 引用类型是null
+Form form = default(Form);
+// 枚举类型，枚举类型声明的时候，会和int对应起来。而default获得的是0对应的东西。
+// 如果枚举里边没有0的时候，会返回一个0.
+</code></pre><h2 id="new">new</h2>
+<p>创建实例，调用实例构造器/初始化器，并返回实例的内存地址。</p>
+<p>构造器是圆括号，初始化器是花括号。</p>
+<pre tabindex="0"><code>// 关键字var来自variable。
+var x = 100;
+x.GetType().Name
+
+// 以下语句可以正常调用，考虑算符优先级
+new Form().ShowDialog();
+// 但是在内存中创建对象却并不一定需要new。例如以下语法糖
+string name = &#34;Tom&#34;;
+int[] myArray = {1,2,3,4};
+// 创建匿名对象
+var person = new {Name = &#34;tom&#34;, age = 34};
+//&lt;&gt;f__AnonymousType0`2
+// 0代表是第0个，2代表里边有两个东西
+person.GetType().Name
+</code></pre><p>new 还可以做为关键字。</p>
+<ul>
+<li>重写子类的方法</li>
+</ul>
+<h2 id="checkedunchecked">checked/unchecked</h2>
+<p>检查值在内存中是否有溢出</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>  <span style="color:#66d9ef">uint</span> x = <span style="color:#66d9ef">uint</span>.MaxValue;
+</span></span><span style="display:flex;"><span>  Console.WriteLine(x);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">string</span> binStr = Convert.ToString(x, <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>  Console.WriteLine(binStr);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 如果不检查异常，就不会有异常，y就是0</span>
+</span></span><span style="display:flex;"><span>  	<span style="color:#66d9ef">uint</span> y = <span style="color:#66d9ef">unchecked</span>(x + <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 如果有异常，就会检查异常，就会触发下面的语句，如果没有catch，会报错</span>
+</span></span><span style="display:flex;"><span>  	Console.WriteLine(y);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">catch</span> (OverflowException ex) {
+</span></span><span style="display:flex;"><span>  	Console.WriteLine(<span style="color:#e6db74">&#34;OverFlow sized&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>如果checked不作为操作符，它可以表示整个语句块是否检查，例如</p>
+<pre tabindex="0"><code>checked{
+
+}
+</code></pre><h2 id="delegate">delegate</h2>
+<p>把delegate作为操作符使用已经很少了，取代它的是lambda。都是用于匿名方法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.myButton.click	+= <span style="color:#66d9ef">delegate</span>(<span style="color:#66d9ef">object</span> sender, RoutedEventArgs e){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">this</span>.MyTextBox.Text = <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.myButton.click	+= (sender, e) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">this</span>.MyTextBox.Text = <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="sizeof">sizeof</h2>
+<p>只能作用于结构体类型，字符串就不属于。</p>
+<p>对于自己定义的结构体，需要使用unsafe上下文，还要对选项做一些修改。</p>
+<h2 id="-">-&gt;</h2>
+<p>是的，C#中有指针类型，但是得放在unsafe上下文中。</p>
+<h2 id="heading-2">&amp;</h2>
+<p>同样，C#中真的有&amp;来取地址。</p>
+<h2 id="类型转换">类型转换</h2>
+<pre tabindex="0"><code>Convert.ToInt32(str);
+</code></pre><h3 id="隐式类型转换">隐式类型转换</h3>
+<ul>
+<li>不丢失精度的转换</li>
+<li>子类向父类转换</li>
+<li>装箱：从栈到堆</li>
+</ul>
+<h3 id="显式类型转换">显式类型转换</h3>
+<p>coder得自己确定自己到底在做什么东西！</p>
+<ul>
+<li>
+<p>cast（铸造：用一个模子，然后将能塞的塞进去，塞不进去？丢掉！）</p>
+<pre tabindex="0"><code>uint x = 65536;
+ushort y = (ushort)x;
+// 这就是cast！implicit敢转的我们转，implicit不敢转的我们也敢转，这就是cast，够清楚吗？啊？！
+</code></pre></li>
+<li>
+<p>拆箱</p>
+</li>
+<li>
+<p>使用Convert类</p>
+</li>
+<li>
+<p>ToString方法、各个数据类型的Parse/tryParse</p>
+<blockquote>
+<p>任何一种数据类型都是以Object类型为根的，而Object仅仅有四个方法</p>
+<ul>
+<li>Equals</li>
+<li>GetHashCode</li>
+<li>GetType</li>
+<li>ToString</li>
+</ul>
+<p>这就意味着，任何一个数据类型都有ToString方法可以调用</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="自己定义一个类型转换">自己定义一个类型转换</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// 有一个类，它叫Stone，还有一个类，它叫Monkey。地球人都知道这个事情，编译器也知道。</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 传闻太古年间有一则秘闻，其实，石头机缘巧合（cast）之下可以变成猴子（对！就是西游记）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 但是还有人不知道这件事。编译器也不知道。所以！</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> TieMenLiu {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TieMen</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args) {
+</span></span><span style="display:flex;"><span>            Stone stone = <span style="color:#66d9ef">new</span> Stone();
+</span></span><span style="display:flex;"><span>            stone.Age = <span style="color:#ae81ff">5000</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">/*Monkey wukongsun = (Monkey)stone;*/</span>
+</span></span><span style="display:flex;"><span>            Monkey wukongsun = stone;
+</span></span><span style="display:flex;"><span>            Console.WriteLine(wukongsun.Age);
+</span></span><span style="display:flex;"><span>        }        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stone</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 不能同时显示和隐式类型转换</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*public static explicit operator Monkey(Stone stone) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            Monkey m = new Monkey();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            m.Age = stone.Age / 500;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            return m;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        }*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">implicit</span> <span style="color:#66d9ef">operator</span> Monkey(Stone stone) {
+</span></span><span style="display:flex;"><span>            Monkey m = <span style="color:#66d9ef">new</span> Monkey();
+</span></span><span style="display:flex;"><span>            m.Age = stone.Age / <span style="color:#ae81ff">250</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> m;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Monkey</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="加减乘">加减乘</h2>
+<p>无穷大和0相乘为NaN</p>
+<h2 id="is">is</h2>
+<p>检测对象是否是类（也可以是父类）的实例。</p>
+<p>例如说老师继承自动物，既然是老师，一定是动物。</p>
+<p>但是</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>Object t = <span style="color:#66d9ef">new</span> techer();
+</span></span><span style="display:flex;"><span>t <span style="color:#66d9ef">is</span> techer
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 这个是对的！</span>
+</span></span></code></pre></div><h2 id="as">as</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>Object o = <span style="color:#66d9ef">new</span> Teacher();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 如果是的话就赋值，不然我就给你null</span>
+</span></span><span style="display:flex;"><span>Teacher t = o <span style="color:#66d9ef">as</span> Teacher;
+</span></span></code></pre></div><h2 id="heading-3">??</h2>
+<blockquote>
+<p>你确定自己不是在抬杠？</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>Nullable&lt;<span style="color:#66d9ef">int</span>&gt; x = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>x = <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(x);
+</span></span><span style="display:flex;"><span>Console.WriteLine(x.hasValue())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 这个和Nullable是一回事情</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int?</span> x = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 如果x是null,则y是1，否则，y是x</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Null值合并操作符</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> y = x ?? <span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/default/">default</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/wpf%E5%9F%BA%E7%A1%80/" data-tooltip="WPF基础" aria-label="下一篇: WPF基础">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/python/" data-tooltip="Python" aria-label="上一篇: Python">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/cainoftes.github.io\/post\/c-%E6%93%8D%E4%BD%9C%E7%AC%A6\/';
+        
+          this.page.identifier = '\/post\/c-%E6%93%8D%E4%BD%9C%E7%AC%A6\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'tranquilpeak';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Cainoftes. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/wpf%E5%9F%BA%E7%A1%80/" data-tooltip="WPF基础" aria-label="下一篇: WPF基础">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/python/" data-tooltip="Python" aria-label="上一篇: Python">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fc-%25E6%2593%258D%25E4%25BD%259C%25E7%25AC%25A6%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fc-%25E6%2593%258D%25E4%25BD%259C%25E7%25AC%25A6%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fc-%25E6%2593%258D%25E4%25BD%259C%25E7%25AC%25A6%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://pic2.zhimg.com/v2-1ff282992fbc7636c11b1f0c5412797f_im.jpg?source=32738c0c" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Cainoftes</h4>
+    
+      <div id="about-card-bio">平平无奇</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Stu.
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://cainoftes.github.io/images/cover.webp');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

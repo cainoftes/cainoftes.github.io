@@ -6,22 +6,22 @@
     <description>Recent content in Posts on Cainoftes的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Oct 2022 21:15:08 +0800</lastBuildDate><atom:link href="https://cainoftes.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 22:23:20 +0800</lastBuildDate><atom:link href="https://cainoftes.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Second</title>
-      <link>https://cainoftes.github.io/post/second/</link>
-      <pubDate>Sat, 01 Oct 2022 21:15:08 +0800</pubDate>
+      <title>Git</title>
+      <link>https://cainoftes.github.io/post/git/</link>
+      <pubDate>Sat, 01 Oct 2022 22:23:20 +0800</pubDate>
       
-      <guid>https://cainoftes.github.io/post/second/</guid>
+      <guid>https://cainoftes.github.io/post/git/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>First</title>
-      <link>https://cainoftes.github.io/post/first/</link>
-      <pubDate>Fri, 30 Sep 2022 13:49:34 +0800</pubDate>
+      <title>Hugo搭配Github Pages发布静态博客</title>
+      <link>https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 01 Oct 2022 22:19:17 +0800</pubDate>
       
-      <guid>https://cainoftes.github.io/post/first/</guid>
+      <guid>https://cainoftes.github.io/post/hugo%E6%90%AD%E9%85%8Dgithub-pages%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
@@ -31,6 +31,186 @@
       <pubDate>Fri, 30 Sep 2022 13:49:34 +0800</pubDate>
       
       <guid>https://cainoftes.github.io/post/sublime-text4-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图片格式</title>
+      <link>https://cainoftes.github.io/post/%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Fri, 15 Jul 2022 22:07:17 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMD</title>
+      <link>https://cainoftes.github.io/post/cmd/</link>
+      <pubDate>Thu, 30 Jun 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown官方语法</title>
+      <link>https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sat, 18 Jun 2022 22:07:16 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/markdown%E5%AE%98%E6%96%B9%E8%AF%AD%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python总写</title>
+      <link>https://cainoftes.github.io/post/python%E6%80%BB%E5%86%99/</link>
+      <pubDate>Sun, 12 Jun 2022 22:07:16 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/python%E6%80%BB%E5%86%99/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C 类</title>
+      <link>https://cainoftes.github.io/post/c-%E7%B1%BB/</link>
+      <pubDate>Mon, 23 May 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/c-%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySql</title>
+      <link>https://cainoftes.github.io/post/mysql/</link>
+      <pubDate>Sat, 21 May 2022 22:07:16 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C语言奇技淫巧</title>
+      <link>https://cainoftes.github.io/post/c%E8%AF%AD%E8%A8%80%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</link>
+      <pubDate>Sat, 21 May 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/c%E8%AF%AD%E8%A8%80%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C 类型</title>
+      <link>https://cainoftes.github.io/post/c-%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Sat, 21 May 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/c-%E7%B1%BB%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WPF基础</title>
+      <link>https://cainoftes.github.io/post/wpf%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 19 May 2022 22:07:16 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/wpf%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C 操作符</title>
+      <link>https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/</link>
+      <pubDate>Thu, 19 May 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/c-%E6%93%8D%E4%BD%9C%E7%AC%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://cainoftes.github.io/post/python/</link>
+      <pubDate>Wed, 11 May 2022 22:07:16 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fluent Python</title>
+      <link>https://cainoftes.github.io/post/fluent-python/</link>
+      <pubDate>Sat, 07 May 2022 22:15:07 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/fluent-python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Antlr4</title>
+      <link>https://cainoftes.github.io/post/antlr4/</link>
+      <pubDate>Tue, 03 May 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/antlr4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://cainoftes.github.io/post/linux/</link>
+      <pubDate>Thu, 21 Apr 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://cainoftes.github.io/post/css/</link>
+      <pubDate>Wed, 13 Apr 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://cainoftes.github.io/post/javascript/</link>
+      <pubDate>Sun, 10 Apr 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://cainoftes.github.io/post/c/</link>
+      <pubDate>Sat, 09 Apr 2022 22:07:14 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>指令及寻址漫谈</title>
+      <link>https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/</link>
+      <pubDate>Tue, 05 Apr 2022 22:07:17 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%AF%BB%E5%9D%80%E6%BC%AB%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Instruction</title>
+      <link>https://cainoftes.github.io/post/instruction/</link>
+      <pubDate>Sun, 03 Apr 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/instruction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://cainoftes.github.io/post/markdown/</link>
+      <pubDate>Sun, 03 Apr 2022 22:07:15 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/markdown/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag2 on Cainoftes的小站</title>
+    <link>https://cainoftes.github.io/tags/tag2/</link>
+    <description>Recent content in tag2 on Cainoftes的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Sep 2022 13:49:34 +0800</lastBuildDate><atom:link href="https://cainoftes.github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://cainoftes.github.io/post/first/</link>
+      <pubDate>Fri, 30 Sep 2022 13:49:34 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sublime Text4 使用指南</title>
+      <link>https://cainoftes.github.io/post/sublime-text4-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Fri, 30 Sep 2022 13:49:34 +0800</pubDate>
+      
+      <guid>https://cainoftes.github.io/post/sublime-text4-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,7 +17,7 @@
   },
   "name":"Cainoftes的小站",
   "description":"",
-  "url":"https:\/\/cainoftes.github.io\/post\/uml-class\/",
+  "url":"https:\/\/cainoftes.github.io\/post\/vim\/",
   "keywords":"[default]"
 }
 
@@ -33,20 +33,20 @@
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UML Class">
-<meta name="twitter:title" content="UML Class">
-<meta property="og:url" content="https://cainoftes.github.io/post/uml-class/">
-<meta property="twitter:url" content="https://cainoftes.github.io/post/uml-class/">
+<meta property="og:title" content="Vim">
+<meta name="twitter:title" content="Vim">
+<meta property="og:url" content="https://cainoftes.github.io/post/vim/">
+<meta property="twitter:url" content="https://cainoftes.github.io/post/vim/">
 <meta property="og:site_name" content="Cainoftes的小站">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2022-10-05T13:44:47">
+    <meta property="article:published_time" content="2022-10-09T12:10:21">
   
   
-    <meta property="article:modified_time" content="2022-10-05T13:44:47">
+    <meta property="article:modified_time" content="2022-10-09T12:10:21">
   
   
   
@@ -77,14 +77,14 @@
 
 
 
-    <title>UML Class</title>
+    <title>Vim</title>
 
     <link rel="icon" href="https://cainoftes.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://cainoftes.github.io/post/uml-class/">
+    <link rel="canonical" href="https://cainoftes.github.io/post/vim/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -244,15 +244,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      UML Class
+      Vim
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-10-05T13:44:47&#43;08:00">
+      <time datetime="2022-10-09T12:10:21&#43;08:00">
         
-  十月 5, 2022
+  十月 9, 2022
 
       </time>
     
@@ -272,46 +272,176 @@
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <!-- raw HTML omitted -->
+<h2 id="前言">前言</h2>
+<p>本文在Windows环境下介绍VIM（GVIM），Neovim，包括安装，使用，配置，插件等部分。</p>
+<p>VIM是VI Improved的缩写，起源于VI，诞生于1991年。最初的VIM是指VI Imitation（模拟），最初的那个开发大神只是想复制，后面变成了VI的超集。</p>
+<p>Neovim是VIM的一个分支（为什么会用这个词，因为他们都是开源的，开源软件在发展方向上有争议的时候，就会出现多个分支），诞生于2014年。起因是Neovim的发起人对VIM的架构有意见，但是被VIM拒绝了，所以启用了Neovim（Neo-是一个词根，是new在构词的时候的变体词，所以neovim不是no vim的意思）。</p>
+<p>VI也是一种文本编辑器，诞生于1976年。其名字来源于ex中的一个命令Visual（视觉的）。在1984年Emacs出现之前，没人任何文本编辑器能在UNIX中和VI竞争。</p>
+<p>ex是extended的缩写，是UNIX上用的纯文本编辑器。</p>
+<p>在当前，VIM的发展似乎也面临着各种问题，例如VS Code和Sublime Text的出现，在某些层面威胁到了VIM，同时VIM内部也开始分裂，例如Neovim是vim的一个分支，他们对于发展方向之间的差别越来越大了。</p>
+<h2 id="安装">安装</h2>
+<p>在Windows下使用的VIM是GVIM，下载地址如下：<a href="https://www.vim.org/download.php">download : vim online</a></p>
+<p>当前的VIM版本是9.0（发布于2022-06-28），而上一个版本是8.2。</p>
+<p>安装完成之后，使用<code>vim --version</code>可以查看安装的vim的版本。</p>
+<p>启动方式分为两种，一种是vim系列，这种在终端模式下启动vim；另一种是gvim，这种使用图像模式启动vim。</p>
+<p>个人还是偏向于使用命令行启动vim，即<code>vim</code>系列的命令，毕竟使用vim是为了解决在命令行中编辑困难的问题（Windows有<code>type</code>命令，但是没办法编辑），如果有图像模式的话还不如是用vscode，同时图形模式的UI有点丑。</p>
+<h2 id="使用">使用</h2>
 <blockquote>
-<p>更重要的是面向对象建模，而不是UML本身长什么样子</p>
+<p>推荐一个学习VIM的网站 <a href="https://www.openvim.com/sandbox.html">Interactive Vim tutorial - sandbox (openvim.com)</a>，在里边可以练习VIM。</p>
 </blockquote>
-<h2 id="简介">简介</h2>
-<p>UML：统一建模语言，包含了很多种的图表（8+），主要用于面向对象设计。</p>
-<p>UML可以通过很多种软件来绘制，比如visio、draw.io、亿图设计等。</p>
-<p>同时还可以用编程语言来实现，代码会转换为UML，这其中最常见的是PlantUML和mermaid（中文：美人鱼）。其中PlantUML类似于编译器，可以通过命令（CMD/Bash）的方式将源文件转换为SVG图片，配合VSCode可以实现分屏实时预览；而Mermaid类似于PlantUML，但是对UML的支持似乎比PlantUML弱一点（UML的图标支持不全面），但是Typora内置了Mermaid，将内嵌代码的格式改为Mermaid会自动显示。</p>
-<p>而Mardown领域打遍无敌手的Typora不支持PlantUML，似乎也是一种遗憾。</p>
-<p>UML Class，是UML中的一种图，同时也是最常用的图之一（甚至没有之一）。</p>
-<h2 id="构件">构件</h2>
-<h3 id="具体类">具体类</h3>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">classDiagram
-	class Stu{
-		+name string
-		+Study() bool
-	}
-</code></pre><h3 id="抽象类">抽象类</h3>
-<p>在界面上唯一的区别是类名是斜体</p>
-<p>使用&laquo; abstract &raquo; 注释</p>
-<h3 id="接口">接口</h3>
-<p>使用&laquo; interface &raquo; 注释</p>
-<h3 id="枚举">枚举</h3>
-<p>使用 &laquo; enum &raquo; 注释</p>
-<h3 id="包">包</h3>
-<h3 id="成员">成员</h3>
-<p><code>~</code>：package/friendly</p>
-<p><code>$</code>：static</p>
-<p><code>*</code>：abstract</p>
-<p><code>+</code>：public</p>
-<p><code>-</code>：private</p>
-<p><code>#</code>：protected</p>
-<p>不带符号为default</p>
-<h2 id="关系">关系</h2>
-<p><img src="https://cainoftes.github.io/images/UML-relationship.png" alt=""></p>
+<h3 id="进入">进入</h3>
+<p>进入vim只需要在CMD中输入<code>vim</code>命令即可，有如下变体。</p>
+<ul>
+<li><code>vim</code>：使用vim打开一个空文件（没有保存，需要选择保存的文件名）</li>
+<li><code>vim [filename]</code>：使用vim打开[filename]</li>
+<li><code>vim +num [filename]</code>：使用vim打开[filename]并且移动到特定的行</li>
+<li><code>vim [filename1] [filename2] [filename3] </code>：同时打开多个文件，如何切换见尾行模式</li>
+<li><code>vim -</code>：从标准输入（stdin）读入文件。</li>
+</ul>
+<h3 id="三种模式">三种模式</h3>
+<p>vim有三种模式：</p>
+<ol>
+<li>命令模式：打开vim之后进入的第一个模式，可以对文件进行一些操作（使用快捷键）</li>
+<li>输入模式：对文件进行编辑，这部分就很正常</li>
+<li>尾行模式：在尾行输入一些命令对文件操作</li>
+</ol>
+<p>三种模式之间的转换如下：</p>
+<p><img src="https://cainoftes.github.io/images/image-20221009151750572.png" alt="image-20221009151750572"></p>
+<ol>
+<li>从命令模式到输入模式：
+<ul>
+<li>i：在当前位置显示出一个 <code>|</code>，也就是在这个位置可以进行输入了</li>
+<li>I：在当前行的行首（第一个非空白字符）显示出一个 <code>|</code>，然后就可以输入了</li>
+<li>a：</li>
+<li>A:</li>
+<li>o：在当前行的下面插入一个空行，光标停留在下面空行行首</li>
+<li>O：在当前行的上面插入一个空行，光标停留在上面空行行首</li>
+<li>s：</li>
+<li>S：</li>
+</ul>
+</li>
+<li>从输入模式到命令模式：直接按下Esc键</li>
+<li>从命令模式进入尾行模式：
+<ul>
+<li><code>:</code>：按下冒号，然后输入命令</li>
+<li><code>/</code>：这种主要是为了查找</li>
+</ul>
+</li>
+<li>从尾行模式进入命令模式：
+<ul>
+<li><code>Enter</code>：输入命令之后回车，命令执行，并且返回命令模式</li>
+<li><code>Esc</code>：不执行命令退回命令模式</li>
+</ul>
+</li>
+<li>进入VIM：参照上面的进入命令</li>
+<li>退出VIM：在命令模式下输入两个大写的ZZ。</li>
+</ol>
+<p>需要注意以下几件事，</p>
+<ul>
+<li>输入模式和尾行模式之间的转换必须通过命令模式</li>
+<li>尾行模式也可以直接退出，也就是<code>q</code>命令，具体参照下面</li>
+<li>命令的执行在尾行模式，而命令模式则主要是快捷键操作</li>
+</ul>
+<h3 id="命令模式">命令模式</h3>
+<ol>
+<li>
+<p>光标移动</p>
+<ul>
+<li>移动到行首：<code>^</code>（其实<code>^</code>很多时候都代表开始，例如正则表达式）</li>
+<li>移动到行尾：<code>$</code>（其实<code>$</code>很多时候都代表开始，例如正则表达式）</li>
+<li>移动到首行：<code>gg</code></li>
+<li>移动到末行：<code>G</code></li>
+<li>上一页：<code>PgUp</code>（下一页同理）</li>
+<li>光标移动到第 n 行：<code>nG</code>（例如<code>2G</code>会移动到第二行）</li>
+<li>光标向下移动 n 行：<code>n↓</code>（例如<code>2↓</code>会将光标移动到当前行的下两行，向上、左、右同理）</li>
+</ul>
+</li>
+<li>
+<p>复制剪贴</p>
+<ul>
+<li>
+<p>复制当前行：<code>yy</code></p>
+</li>
+<li>
+<p>粘贴：<code>p</code>，需要注意的是，这只能用于在vim里边复制的东西，如果是从别处复制来的，还是要使用系统带的粘贴命令<code>ctrl + shift + V</code></p>
+<p>为什么会这样？不知道，具体的实现可能和什么寄存器相关</p>
+</li>
+<li>
+<p>复制当前行及其下 n - 1 行：<code>nyy</code></p>
+</li>
+<li>
+<p>可视化复制：使用 <code>v</code> 就可以高亮显示选中的文字，然后使用 <code>y</code>复制</p>
+</li>
+<li>
+<p>剪切当前行：<code>dd</code>（包括换行符，即下一行上移）</p>
+</li>
+<li>
+<p>剪切当前行及其下 n - 1行：<code>ndd</code></p>
+</li>
+<li>
+<p>可视化剪切：使用 <code>v</code> 就可以高亮显示选中的文字，然后使用 <code>d</code>剪切</p>
+</li>
+</ul>
+</li>
+<li>
+<p>撤销恢复</p>
+<ul>
+<li>撤销：<code>u</code></li>
+<li>恢复：<code>ctrl + r</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="尾行模式">尾行模式</h3>
+<ol>
+<li>保存更改：<code>:w</code>，或者<code>:w [path]</code></li>
+<li>退出文件：<code>:q</code>，可以和<code>w</code>组合使用</li>
+<li>强制执行：<code>:!</code>，可以和<code>q</code>组合使用</li>
+<li>查找关键词：<code>/word</code>，会高亮显示，然后使用<code>N/n</code>切换上下</li>
+<li>显示行号：<code>:set nu</code></li>
+<li>取消行号显示：<code>:set nonu</code></li>
+<li>显示当前打开的所以文件：<code>:files</code></li>
+<li>切换到打开的其它文件：<code>:open [filename]</code></li>
+</ol>
+<h3 id="编辑模式">编辑模式</h3>
+<p>没啥好说的，就跟平常的notepad一样编辑就可以，VIM主要复杂在前两种模式上。</p>
+<h2 id="配置">配置</h2>
+<p>配置文件如下，可以使用<code>vim --version</code>查看</p>
+<ul>
+<li>系统 vimrc 文件: &ldquo;$VIM\vimrc&rdquo;</li>
+<li>用户 vimrc 文件: &ldquo;$HOME_vimrc&rdquo;</li>
+<li>用户 exrc 文件: &ldquo;$HOME_exrc&rdquo;</li>
+<li>defaults 文件: &ldquo;$VIMRUNTIME\defaults.vim&rdquo;</li>
+</ul>
+<p>其中以<code>$</code>开头的都指向一个具体的路径，以<code>$VIM</code>为例，可以通过在尾行模式中输入<code>:echo $VIM</code>查看</p>
+<h3 id="vimrc">vimrc</h3>
+<p>可以参考此处 [Vim 配置文件 vimrc 入门简介 - MyBatis中文官网](<a href="http://www.mybatis.cn/archives/1303.html#:~:text=.vimrc">http://www.mybatis.cn/archives/1303.html#:~:text=.vimrc</a>是Vim的配置文件，Vim编辑器相关的所有功能开关都可以通过.vimrc文件进行设置。 备注：文件名中的 &ldquo;rc&rdquo;,是出自 &ldquo;run commands&rdquo;。)</p>
+<p>vimrc是vim的配置文件，其中的rc是run commands的简写。系统vimrc放在vim安装目录下，用户vimrc放在home目录下。</p>
+<p>由于有用户和系统两个配置文件，当他们发生冲突的时候，会取用户vimrc中的配置。</p>
+<p>vimrc里边以 “ 开头的行，都是注释行，没有任何用处</p>
+<p>以下是我自己添加的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>set number
+</span></span><span style="display:flex;"><span>set cursorline
+</span></span><span style="display:flex;"><span>set showmatch
+</span></span><span style="display:flex;"><span>set tabstop<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>set ruler
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34; 文件在vim之外修改过，自动读入 &#34;</span>
+</span></span><span style="display:flex;"><span>set autoread
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34; 配色方案&#34;</span>
+</span></span><span style="display:flex;"><span>colorscheme desert
+</span></span></code></pre></div><ul>
+<li><input disabled="" type="checkbox"> 待完善</li>
+</ul>
+<h2 id="插件">插件</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 待完善</li>
+</ul>
 <h2 id="参考">参考</h2>
-<p><a href="https://www.visual-paradigm.com/cn/guide/uml-unified-modeling-language/what-is-uml/">https://www.visual-paradigm.com/cn/guide/uml-unified-modeling-language/what-is-uml/</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/109655171">30分钟学会UML类图 - 知乎 (zhihu.com)</a></p>
-<p><a href="http://www.jasongj.com/uml/class_diagram/">UML 类图 架构师 依赖 关联 聚合 组合 实现 继承 | 技术世界 | UML,类图,系统设计,架构设计,技术世界,郭俊 Jason,大数据架构 (jasongj.com)</a></p>
-<p><a href="https://www.cnblogs.com/mybdss/p/14958781.html">https://www.cnblogs.com/mybdss/p/14958781.html</a></p>
-<p><a href="https://www.xiehai.zone/2021-12-11-mermaind-class-diagram.html">https://www.xiehai.zone/2021-12-11-mermaind-class-diagram.html</a></p>
+<p><a href="https://www.cnblogs.com/xdr630/p/15254832.html#:~:text=Vim%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%89%E7%A7%8D,%E5%BC%8F%EF%BC%88%E5%B0%BE%E8%A1%8C%E6%A8%A1%E5%BC%8F%EF%BC%89%E3%80%82">Linux命令之vim三种模式 - 兮动人 - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://blog.csdn.net/zxy9602/article/details/79439257">全世界最好的编辑器VIM之Windows配置（gvim）_pdsu_zhao的博客-CSDN博客_windows下vim编辑器</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/57476890">VIM配置繁琐？VimPlus：“在我这儿不存在！！！” - 知乎 (zhihu.com)</a></p>
+<p>[Vim 配置文件 vimrc 入门简介 - MyBatis中文官网](<a href="http://www.mybatis.cn/archives/1303.html#:~:text=.vimrc">http://www.mybatis.cn/archives/1303.html#:~:text=.vimrc</a>是Vim的配置文件，Vim编辑器相关的所有功能开关都可以通过.vimrc文件进行设置。 备注：文件名中的 &ldquo;rc&rdquo;,是出自 &ldquo;run commands&rdquo;。)</p>
+<p><a href="https://ichunyu.github.io/neovim/">https://ichunyu.github.io/neovim/</a></p>
+<p><a href="https://vizee.org/2022/04/03/neovim-lua-config/">使用 lua 配置 neovim | /vizee</a></p>
               
 
 
@@ -338,7 +468,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/vim/" data-tooltip="Vim" aria-label="下一篇: Vim">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -346,7 +476,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/git/" data-tooltip="Git" aria-label="上一篇: Git">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/uml-class/" data-tooltip="UML Class" aria-label="上一篇: UML Class">
           
               <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
               <i class="fa fa-angle-right"></i>
@@ -364,19 +494,19 @@
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/uml-class/" title="分享到 Facebook" aria-label="分享到 Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/vim/" title="分享到 Facebook" aria-label="分享到 Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/uml-class/" title="分享到 Twitter" aria-label="分享到 Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/vim/" title="分享到 Twitter" aria-label="分享到 Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/uml-class/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/vim/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -407,9 +537,9 @@
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/cainoftes.github.io\/post\/uml-class\/';
+        this.page.url = 'https:\/\/cainoftes.github.io\/post\/vim\/';
         
-          this.page.identifier = '\/post\/uml-class\/'
+          this.page.identifier = '\/post\/vim\/'
         
       };
       (function() {
@@ -445,7 +575,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/vim/" data-tooltip="Vim" aria-label="下一篇: Vim">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -453,7 +583,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/git/" data-tooltip="Git" aria-label="上一篇: Git">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://cainoftes.github.io/post/uml-class/" data-tooltip="UML Class" aria-label="上一篇: UML Class">
           
               <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
               <i class="fa fa-angle-right"></i>
@@ -471,19 +601,19 @@
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/uml-class/" title="分享到 Facebook" aria-label="分享到 Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://cainoftes.github.io/post/vim/" title="分享到 Facebook" aria-label="分享到 Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/uml-class/" title="分享到 Twitter" aria-label="分享到 Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://cainoftes.github.io/post/vim/" title="分享到 Twitter" aria-label="分享到 Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/uml-class/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://cainoftes.github.io/post/vim/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -514,19 +644,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fuml-class%2F" aria-label="分享到 Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fvim%2F" aria-label="分享到 Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fuml-class%2F" aria-label="分享到 Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fvim%2F" aria-label="分享到 Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fuml-class%2F" aria-label="分享到 Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcainoftes.github.io%2Fpost%2Fvim%2F" aria-label="分享到 Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
         </a>
       </li>

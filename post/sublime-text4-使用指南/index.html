@@ -92,7 +92,7 @@
     
     
     
-    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-2yswghox5x2hpz4atgknfxkz73qj8a98znqonxm5ylrluaey9qnb6qj.min.css" />
     
     
 
@@ -252,7 +252,12 @@
     
       <time datetime="2022-09-30T13:49:34&#43;08:00">
         
-  九月 30, 2022
+  
+  
+  
+  
+    2022-9-30
+  
 
       </time>
     
@@ -287,7 +292,22 @@
 <p>使用快捷键 <code>Ctrl + Shift + P</code>，调出来命令面板，在其中输入 <code>install package control</code>，回车之后自动安装。</p>
 <p>如何使用Package Control 见下文 插件 部分。</p>
 <h1 id="快捷键">快捷键</h1>
-<h2 id="通用">通用</h2>
+<h2 id="自定义快捷键">自定义快捷键</h2>
+<p>[Preferences] -&gt; [Key Bandings]</p>
+<p>会弹出两个左右分屏的窗口，左边是默认的快捷键信息，右边是需要自己设置的快捷键信息（初始的时候为空，只有一对中括号）。</p>
+<p>其文件格式为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;keys&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;ctrl+shift+n&#34;</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;new_window&#34;</span> <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;keys&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;ctrl+shift+w&#34;</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;close_window&#34;</span> <span style="color:#f92672">}</span>	
+</span></span><span style="display:flex;"><span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>要设置一个快捷键，需要改动两个地方，第一个地方为要设置的快捷键，第二个地方为快捷键要绑定的事件。可以理解为按下快捷键之后调用了一个函数。</p>
+<p>关键是找到每一个事件对应什么函数，按照以下步骤操作</p>
+<p>使用快捷键 ctrl + `，在调出的命令框中输入<code>sublime.log_commands(True)</code>，之后每操作一个事件，都会出现一个函数。</p>
+<p>例如将打开一个文件夹的快捷键设置为 `ctrl + shift + o&quot;，[file] -&gt; [open folder]之后会出现</p>
+<pre tabindex="0"><code>command: prompt_open_folder 
+</code></pre><p>所以快捷键设置为</p>
+<pre tabindex="0"><code>{ &#34;keys&#34;: [&#34;ctrl+shift+o&#34;], &#34;command&#34;: &#34;prompt_open_folder&#34; }
+</code></pre><h2 id="通用">通用</h2>
 <ul>
 <li>Alt : 调出菜单</li>
 <li>Ctrl + Shift + P : 调出命令面板</li>
@@ -676,7 +696,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="https://cainoftes.github.io/js/script-sofkd0sinlr4udojvbo1wtho1876andfgozi14yqcmcoomqd7bnzy4fpoq4f.min.js"></script>
 
 
   

@@ -92,7 +92,7 @@
     
     
     
-    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="https://cainoftes.github.io/css/style-2yswghox5x2hpz4atgknfxkz73qj8a98znqonxm5ylrluaey9qnb6qj.min.css" />
     
     
 
@@ -252,7 +252,12 @@
     
       <time datetime="2022-10-01T22:19:17&#43;08:00">
         
-  十月 1, 2022
+  
+  
+  
+  
+    2022-10-1
+  
 
       </time>
     
@@ -271,7 +276,36 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <!-- raw HTML omitted -->
+              <h1 id="table-of-contents">目录</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#工具介绍">工具介绍</a></li>
+        <li><a href="#hugo生成静态博客">Hugo生成静态博客</a>
+          <ul>
+            <li><a href="#windows下的hugo下载">Windows下的Hugo下载</a></li>
+            <li><a href="#hugo使用">Hugo使用</a></li>
+            <li><a href="#configtoml详细配置">config.toml详细配置</a></li>
+            <li><a href="#新文章模板">新文章模板</a></li>
+            <li><a href="#图床设置">图床设置</a></li>
+            <li><a href="#评论功能">评论功能</a></li>
+            <li><a href="#tranquilpeak-设置">Tranquilpeak 设置</a></li>
+          </ul>
+        </li>
+        <li><a href="#部署到github-pages">部署到Github Pages</a>
+          <ul>
+            <li><a href="#建立仓库">建立仓库</a></li>
+            <li><a href="#将本地文件托管到github">将本地文件托管到github</a></li>
+            <li><a href="#查看">查看</a></li>
+          </ul>
+        </li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 <blockquote>
 <p>学会，然后完成！而不是，完成，再学。</p>
 </blockquote>
@@ -343,7 +377,15 @@
 <p>图片的默认根目录为./static，如果一个图片目录为./static/a.jpg，那么引用的时候要使用 /a.jpg，一般情况下，在./static/img下。</p>
 <h3 id="评论功能">评论功能</h3>
 <p>暂未完善</p>
-<h2 id="部署到github-pages">部署到Github Pages</h2>
+<h3 id="tranquilpeak-设置">Tranquilpeak 设置</h3>
+<h4 id="设置字体">设置字体</h4>
+<p>在目录 &ldquo;.\themes\tranquilpeak\src\scss\utils_variables.scss&quot;中设置，需要注意的是，设置完成之后需要build一下，具体来说，使用如下命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-- 需要在当前目录下安装grunt的cli工具
+</span></span><span style="display:flex;"><span>.<span style="color:#ae81ff">\t</span>hemes<span style="color:#ae81ff">\t</span>ranquilpeak &gt; npm install grunt-cli
+</span></span><span style="display:flex;"><span>-- 任意选择一条执行
+</span></span><span style="display:flex;"><span>.<span style="color:#ae81ff">\t</span>hemes<span style="color:#ae81ff">\t</span>ranquilpeak &gt; npm run prod
+</span></span><span style="display:flex;"><span>.<span style="color:#ae81ff">\t</span>hemes<span style="color:#ae81ff">\t</span>ranquilpeak &gt; grunt buildProd
+</span></span></code></pre></div><h2 id="部署到github-pages">部署到Github Pages</h2>
 <h3 id="建立仓库">建立仓库</h3>
 <p>新建立一个仓库，仓库名字命名为 [name].github.io</p>
 <p>如果你的github用户名为 zhangsan，那仓库名为zhangsan.github.io</p>
@@ -374,12 +416,16 @@
 </ul>
 <h3 id="查看">查看</h3>
 <p>可以通过 zhangsan.github.io （zhangsan修改为自己的github名）查看自己的博客，需要注意的是，从推送到github再到更新，可能有一段时间（1min这个样子）</p>
-<p>参考</p>
-<p><a href="https://zz2summer.github.io/github-pages-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#%E5%85%AD%E9%83%A8%E7%BD%B2%E5%88%B0-github">Github Pages + Hugo 搭建个人博客 - 渣渣的夏天 (zz2summer.github.io)</a></p>
+<h2 id="参考">参考</h2>
+<p><a href="https://github.com/asleep2/hugo/blob/master/tranquilpeak%E4%B8%BB%E9%A2%98%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md">hugo/tranquilpeak主题说明文档.md at master · asleep2/hugo (github.com)</a></p>
+<p><a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md">hugo-tranquilpeak-theme/user.md at master · kakawait/hugo-tranquilpeak-theme (github.com)</a></p>
+<p><a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/developer.md">hugo-tranquilpeak-theme/developer.md at master · kakawait/hugo-tranquilpeak-theme (github.com)</a></p>
+<p><a href="https://zz2summer.github.io/github-pages-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Github Pages + Hugo 搭建个人博客 - 渣渣的夏天 (zz2summer.github.io)</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/57361697">如何利用 GitHub Pages 和 Hugo 轻松搭建个人博客？ - 知乎 (zhihu.com)</a></p>
 <p><a href="https://www.jianshu.com/p/8da9cc971851">Hugo+tranquilpeak搭建个人博客+github部署（windows10） - 简书 (jianshu.com)</a></p>
 <p><a href="https://blog.csdn.net/du_milestone/article/details/83048444">tranquilpeak主题个性化_Chris.DDD的博客-CSDN博客</a></p>
-<p><a href="https://blog.fevenor.com/2016/02/15/Tranquilpeak%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%85%8D%E7%BD%AE/#Tranquilpeak%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE">Tranquilpeak主题的使用及配置 - Fevenor&rsquo;s Blog</a></p>
+<p><a href="https://blog.fevenor.com/2016/02/15/Tranquilpeak%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%85%8D%E7%BD%AE/">Tranquilpeak主题的使用及配置 - Fevenor&rsquo;s Blog</a></p>
+<p><a href="https://hilen.github.io/2016/05/16/tranquilpeak-theme-tutorial/">Tranquilpeak 主题的使用方法 - Hilen Blog</a></p>
               
 
 
@@ -653,7 +699,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://cainoftes.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="https://cainoftes.github.io/js/script-sofkd0sinlr4udojvbo1wtho1876andfgozi14yqcmcoomqd7bnzy4fpoq4f.min.js"></script>
 
 
   

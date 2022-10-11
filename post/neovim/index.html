@@ -51,12 +51,16 @@
   
   
     
-      <meta property="article:section" content="default">
+      <meta property="article:section" content="软件">
     
   
   
     
-      <meta property="article:tag" content="default">
+      <meta property="article:tag" content="Neovim">
+    
+      <meta property="article:tag" content="Vim">
+    
+      <meta property="article:tag" content="配置">
     
   
 
@@ -266,7 +270,7 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://cainoftes.github.io/categories/default">default</a>
+      <a class="category-link" href="https://cainoftes.github.io/categories/%e8%bd%af%e4%bb%b6">软件</a>
     
   
 
@@ -276,16 +280,50 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <!-- raw HTML omitted -->
-<p>[toc]</p>
+              <h1 id="table-of-contents">目录</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#配置">配置</a>
+          <ul>
+            <li><a href="#基础篇">基础篇</a></li>
+            <li><a href="#vim命名空间">Vim命名空间</a></li>
+            <li><a href="#initvim">init.vim</a></li>
+            <li><a href="#packer">Packer</a></li>
+          </ul>
+        </li>
+        <li><a href="#插件">插件</a>
+          <ul>
+            <li><a href="#主题">主题</a></li>
+            <li><a href="#目录树nvim-tree">目录树——nvim-tree</a></li>
+            <li><a href="#顶栏bufferline">顶栏——bufferline</a></li>
+            <li><a href="#lsp">LSP</a></li>
+          </ul>
+        </li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 <h2 id="前言">前言</h2>
+<p>大部分时间都会使用 VSCode 、 Sublime Text、各种 IDE，之所以配置 VIM，只是为了实现在终端下也能编辑文件。所以目的是能用，而不是好用。</p>
+<p>本篇将会介绍 Neovim 在 Windows 下的配置和插件。</p>
 <p>关于 vim 的基本操作和 vim 的配置可以参考前一篇文章 ： <a href="https://cainoftes.github.io/post/vim/">Vim (cainoftes.github.io)</a></p>
-<p>本篇将会详细说明 Neovim 在 Windows 下的配置和插件。</p>
+<p>Neovim 使用 Lua 配置，除了自己配置外，也可以直接使用大佬们配置好的东西</p>
+<ul>
+<li><a href="https://github.com/LunarVim/LunarVim">https://github.com/LunarVim/LunarVim</a></li>
+<li><a href="https://github.com/ayamir/nvimdots">https://github.com/ayamir/nvimdots</a></li>
+</ul>
+<p>但是这样没法做到个性化，同时不知道大佬们到底配置了些什么，诸如一些快捷键，一些插件，根本不知道有没有，能不能用，怎么用。还是跟使用一个 IDE 差不多。所以不建议直接 clone 后使用，至少需要知道到底配置了一些什么。</p>
+<p>同时还有 SpaceVim 的项目，也可以帮助实现更快速的配置。</p>
 <h2 id="配置">配置</h2>
 <h3 id="基础篇">基础篇</h3>
 <p>VIM 的配置文件为 init.vim，Neovim 也支持 init.vim 配置，但是同时，Neovim 也使用 init.lua 配置，即使用 lua 语言，这也就是所说的 Neovim 是 VIM 的超集。</p>
 <p>另外，init.vim 的功能比 init.lua 稍微强一点， 有部分功能暂时还没办法使用 init.lua 配置。*.vim 文件优先于 *.lua 文件调用。</p>
-<p>在 Linux 下，用户配置文件为 ~/.config/nvim/init.vim；在 Windows 下，用户配置文件为 ~/AppData/Local/nvim/init.vim；</p>
+<p>在 Linux 下，用户配置文件为 ~/.config/nvim/init.vim；在 Windows 下，用户配置文件为 ~/AppData/Local/nvim/init.vim ，插件等下载路径为 ~/AppData/Local/nvim_data/ ；</p>
 <p>（这也就是我折腾了好久的地方，以为 Windows 下和 Linux 下一样。大部分的博客都不会说明这件事情，可能它们默认都在 Linux 下工作）</p>
 <h3 id="vim命名空间">Vim命名空间</h3>
 <ul>
@@ -301,14 +339,65 @@
 <h3 id="initvim">init.vim</h3>
 <p>这是 neovim 启动时直接调用的文件，所有的用户配置都要放在该文件中或者在该文件中调用。</p>
 <p>调用方式：使用 <code>lua require('basic')</code>来调用 lua 目录下的 basic.lua 文件。</p>
+<h3 id="packer">Packer</h3>
+<p>vim 一般使用 vim-plug 管理插件，neovim 5.0 之后一般都会使用 packer.nvim 作插件的管理。</p>
+<p>教程如下：<a href="https://github.com/wbthomason/packer.nvim#quickstart">wbthomason/packer.nvim: Quickstart (github.com)</a></p>
+<p>安装之后在 init.vim 文件中使用 <code>lua require('plugins')</code>来调用 lua 目录下的 plugins.lua，其中plugins.lua 中添加如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">return</span> require(<span style="color:#e6db74">&#39;packer&#39;</span>).startup(<span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- Packer can manage itself</span>
+</span></span><span style="display:flex;"><span>    use <span style="color:#e6db74">&#39;wbthomason/packer.nvim&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- gruvbox theme</span>
+</span></span><span style="display:flex;"><span>    use {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ellisonleao/gruvbox.nvim&#34;</span>,
+</span></span><span style="display:flex;"><span>        requires <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;rktjmp/lush.nvim&#34;</span>}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- nord theme</span>
+</span></span><span style="display:flex;"><span>    use <span style="color:#e6db74">&#39;shaunsingh/nord.nvim&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- nvim-tree</span>
+</span></span><span style="display:flex;"><span>    use {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;kyazdani42/nvim-tree.lua&#39;</span>,
+</span></span><span style="display:flex;"><span>        requires <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;kyazdani42/nvim-web-devicons&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- using packer.nvim</span>
+</span></span><span style="display:flex;"><span>    use {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;akinsho/bufferline.nvim&#39;</span>,
+</span></span><span style="display:flex;"><span>        tag <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;v2.*&#34;</span>,
+</span></span><span style="display:flex;"><span>        requires <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;kyazdani42/nvim-web-devicons&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- lspconfig</span>
+</span></span><span style="display:flex;"><span>    use {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;neovim/nvim-lspconfig&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;williamboman/nvim-lsp-installer&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>)
+</span></span></code></pre></div><p>注：以上部分涉及其余的插件。</p>
+<p>之后启动 Neovim ，在其中执行 <code>:PackerSync</code> 命令来管理插件（将插件信息写入 plugins.lua 中，调用该命令自动安装更新）</p>
 <h2 id="插件">插件</h2>
-<p>这部分[1]已经讲清楚了，就不再说了</p>
+<p>这部分[1]已经讲清楚了，挑重点复现一下。</p>
 <h3 id="主题">主题</h3>
+<p>nord 和 gruvbox</p>
+<h3 id="目录树nvim-tree">目录树——nvim-tree</h3>
+<ul>
+<li><code>o</code> 打开关闭文件夹</li>
+<li><code>a</code> 创建文件</li>
+<li><code>r</code> 重命名</li>
+<li><code>x</code> 剪切</li>
+<li><code>c</code> 拷贝</li>
+<li><code>p</code> 粘贴</li>
+<li><code>d</code> 删除</li>
+</ul>
+<h3 id="顶栏bufferline">顶栏——bufferline</h3>
 <h3 id="lsp">LSP</h3>
 <p>LSP 是指语言服务协议，由微软提出。LSP 将编程语言分为了 Language Server 和 Language Client 两个部分。Server 就相当于后端，提供代码补全、查找引用、跳转到定义等功能。</p>
+<p>该部分的插件为 nvim-lspconfig 和 nvim-lsp-installer。前者实现配置功能，或者控制 LS 的安装。</p>
 <h2 id="参考">参考</h2>
 <p>[1]<a href="https://github.com/nshen/learn-neovim-lua">nshen/learn-neovim-lua: Neovim 配置实战：从 0 到 1 打造自己的 IDE (github.com)</a></p>
 <p><a href="https://github.com/nanotee/nvim-lua-guide">nanotee/nvim-lua-guide: A guide to using Lua in Neovim (github.com)</a></p>
+<p><a href="https://www.cnblogs.com/SR-Program/p/15773546.html">NVIM 配置打造 - SR丶 - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://www.cnblogs.com/lilpig/p/16633304.html">https://www.cnblogs.com/lilpig/p/16633304.html</a></p>
+<p><a href="https://neovim.io/doc/user/options.html">https://neovim.io/doc/user/options.html</a></p>
+<p><a href="https://www.cnblogs.com/lilpig/p/16633304.html">配置neovim7 - yudoge - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://blog.csdn.net/lanuage/article/details/126279326">从零开始配置 vim(12)——主题配置_aluluka的博客-CSDN博客_vim 设置主题</a></p>
               
 
 
@@ -322,7 +411,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/default/">default</a>
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/neovim/">Neovim</a>
+
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/vim/">Vim</a>
+
+  <a class="tag tag--primary tag--small" href="https://cainoftes.github.io/tags/%E9%85%8D%E7%BD%AE/">配置</a>
 
                   </div>
                 
